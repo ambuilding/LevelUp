@@ -36,7 +36,7 @@ class WorkoutPlaceMember {
 
 //new WorkoutPlaceMember('Jane', 160);
 $jane = new WorkoutPlaceMember('Jane', new Weight(160));
-$jane->workoutForTimeLength::fromMinutes(45))//(TimeLength::fromHours(3));//(new TimeLength(3));//(3);
+$jane->workoutFor(TimeLength::fromMinutes(45));//(TimeLength::fromHours(3));//(new TimeLength(3));//(3);
 
 class TimeLength {
 	protected $seconds;

@@ -1,0 +1,26 @@
+#! /usr/bin/env php
+<?php
+
+use Acme\sayHelloCommand;
+use Symfony\Component\Console\Application;
+
+require 'vendor/autoload.php';
+
+$app = new Application('Command', '1.0');
+$app->add(new sayHelloCommand);
+
+$app->run();
+
+/*
+$app = new Application('Command', '1.0');
+
+$app->register('sayHelloTo')
+	->addArgument('name', InputArgument::OPTIONAL, 'Your name')//REQUIRED)
+	->setDescription('Offer a greeting to the. given person.')
+	->setCode(function(InputInterface $input, OutputInterface $output) {
+		$message = 'Hello,' . $input->getArgument('name');
+		$output->writeln("<info>{$message}</info>");
+	});
+
+$app->run();
+*/
