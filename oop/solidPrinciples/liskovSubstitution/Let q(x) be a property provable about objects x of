@@ -1,0 +1,7 @@
+Let q(x) be a property provable about objects x of type T.
+
+then q(y) should be provable for object y of type S where
+S is a subtype of T.
+
+
+Derived classes must be substitutable for their base classes.
