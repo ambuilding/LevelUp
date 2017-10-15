@@ -1,43 +1,28 @@
 ## Linux Command Line
 
-Control-L/Command-K: keep the terminal neat.
-
-$ rm -rf //recursively&forcibly. $ rmdir dir
-
-$ mv WATER.c water.c // change the file’s name. $ mv src/Person.php src/Users/Person.php
-
-$ cd <directory> //input the first letters of dir hit tab. $ cd -  //the prior one and the current dir
-$ pwd // print working directory. $ mkdir -p foo/bar/baz
-
-$ touch folder/file. $ touch foo/{a,b,c,d,e}. $ touch a b c
-
-$ man ls // help. $ grep //search. $ diff foo bar
-$ cat composer.json  $ tree  $ echo {} > composer.json
-
-$ ls -l > foo  $ wc -l < foo  $ wc -l foo  $ ls -l | wc -l
-
-$ cp php.php php01.php $ cp -r // recursive copy entire directories
-
-
-
-$ curl -I www.google.com
-$ curl http://… | python -mjson.tool
-$ alias prettify=“python -mjson.tool"
-
+- Control-L/Command-K: keep the terminal neat.
+- $ rm -rf //recursively&forcibly. $ rmdir dir
+- $ mv WATER.c water.c // change the file’s name. $ mv src/Person.php src/Users/Person.php
+- $ cd <directory> //input the first letters of dir hit tab. $ cd -  //the prior one and the current dir
+- $ pwd // print working directory. $ mkdir -p foo/bar/baz
+- $ touch folder/file. $ touch foo/{a,b,c,d,e}. $ touch a b c
+- $ man ls // help. $ grep //search. $ diff foo bar
+- $ cat composer.json  $ tree  $ echo {} > composer.json
+- $ ls -l > foo  $ wc -l < foo  $ wc -l foo  $ ls -l | wc -l
+- $ cp php.php php01.php $ cp -r // recursive copy entire directories
 
 
 Apache:
 Apachectl: $ apachectl restart
 Php.ini: /usr/local/php5/lib/php.ini
 
-Hosts: $ sudo vi /etc/hosts
+$ sudo vi /etc/hosts // Hosts
 
 $ cd /etc/apache2/
 $ vi httpd.conf
 /Library/WebServer/Documents
 
-IP address: $ ifconfig
-
+$ ifconfig // IP address
 
 $ sudo su -   then: log out   exit
 
@@ -61,16 +46,16 @@ Security
 Service httpd restart
 
 
-$ telnet www.google.com 80
-GET / HTTP/1.1
-$ telnet harvard.edu 80
-GET / HTTP/2.0
+$ telnet www.google.com 80 or harvard.edu 80 or localhost 80
 Host: harvard.edu
-$ telnet localhost 80
 
 17381:
-$ traceroute www.berkeley.edu  $ traceroute -q 1 www.mit.edu
-$ nslookup www.facebook.com $ nslookup harvard.edu
+$ traceroute www.berkeley.edu or -q 1 www.mit.edu
+$ nslookup www.facebook.com or harvard.edu
+
+$ curl -I www.google.com
+$ curl http://… | python -mjson.tool
+$ alias prettify=“python -mjson.tool"
 
 $curl “https://www.google.com/search?q=mice”
 $ curl -I http://31.13.95.36/
