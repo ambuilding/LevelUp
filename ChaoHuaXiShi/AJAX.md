@@ -44,9 +44,11 @@
    - Ajax
 
 2. basic syntax
+
 	$(selector).action()
 
 3 jQuery Example & Compare to “Events” slide - jQuery is much more concise!
+
 	$(window).load(function() {
 		$("#search_button").click(function() {
 			alert("You clicked the search button");
@@ -55,17 +57,30 @@
 
 4. Some Useful jQuery
    - call someFunction when DOM has loaded
+
 	$(document).ready(someFunction)
+
    - select the DOM element with ID someID
- 	$("#someID")
+
+	$("#someID")
+
    - on <form> submission, call someFunction
- 	.submit(someFunction)
+```
+.submit(someFunction)
+```
+
    - get value submitted through a form
- 	.val()
+```
+.val()
+```
+
    - access HTML
- 	.html()
+```
+.html()
+```
 
 5. Ajax + jQuery
+
 	$.getJSON(URL, parameters)
 		.done(function(data, textStatus, jqXHR) {
 			// if successful, do something
