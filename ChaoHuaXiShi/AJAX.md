@@ -50,19 +50,19 @@
 
 2. basic syntax
 
-        ```
-		$(selector).action()
-		```
+    ```
+    $(selector).action()
+	```
 
 3. jQuery Example & Compare to “Events” slide - jQuery is much more concise!
 
-		```
-		$(window).load(function() {
-			$("#search_button").click(function() {
-				alert("You clicked the search button");
-			});
+	```
+	$(window).load(function() {
+		$("#search_button").click(function() {
+			alert("You clicked the search button");
 		});
-		```
+	});
+	```
 
 4. Some Useful jQuery
    - call someFunction when DOM has loaded
