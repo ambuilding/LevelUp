@@ -54,7 +54,7 @@
 		$(selector).action()
 		```
 
-3 jQuery Example & Compare to “Events” slide - jQuery is much more concise!
+3. jQuery Example & Compare to “Events” slide - jQuery is much more concise!
 
 		```
 		$(window).load(function() {
