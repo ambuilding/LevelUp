@@ -8,7 +8,9 @@
 
 1. Central to our ability to asynchronously update our pages is to make use of a special JavaScript object called an XMLHttpRequest.
 
+	```
 	var xhttp = new XMLHttpRequest();
+	```
 
 2. After obtaining the new object, we need to define its onreadystatechange behavior.
    - This is a function (typically an anonymous function) that will be called when the asynchronous HTTP request has completed, and thus typically defines what is expected to change on your site.
@@ -21,17 +23,19 @@
 4. Then just make your asynchronous request using the open() method to define the request and the send() method to actually send it.
    - There is a slightly different way to do this syntactically with jQuery.
 
-	function ajax_request(argument)
-	{
-		var aj = new XMLHttpRequest();
-		aj.onreadystatechange = function() {
-			if (aj.readyState == 4 && aj.status == 200)
-				// do something to the page
-		};
+        ```
+		function ajax_request(argument)
+		{
+			var aj = new XMLHttpRequest();
+			aj.onreadystatechange = function() {
+				if (aj.readyState == 4 && aj.status == 200)
+					// do something to the page
+			};
 
-		aj.open(“GET”, /* url */, true);
-		aj.send();
-	}
+			aj.open(“GET”, /* url */, true);
+			aj.send();
+		}
+		```
 
 
 # jQuery
@@ -46,48 +50,54 @@
 
 2. basic syntax
 
-	$(selector).action()
+        ```
+		$(selector).action()
+		```
 
 3 jQuery Example & Compare to “Events” slide - jQuery is much more concise!
 
-	$(window).load(function() {
-		$("#search_button").click(function() {
-			alert("You clicked the search button");
+		```
+		$(window).load(function() {
+			$("#search_button").click(function() {
+				alert("You clicked the search button");
+			});
 		});
-	});
+		```
 
 4. Some Useful jQuery
    - call someFunction when DOM has loaded
 
-	```
-	$(document).ready(someFunction)
-	```
+		```
+		$(document).ready(someFunction)
+		```
 
    - select the DOM element with ID someID
 
-	```
-	$("#someID")
-	```
+		```
+		$("#someID")
+		```
 
    - on <form> submission, call someFunction
 
-	```
-	.submit(someFunction)
-	```
+		```
+		.submit(someFunction)
+		```
 
    - get value submitted through a form
 
-	```
-	.val()
-	```
+		```
+		.val()
+		```
 
    - access HTML
-```
-.html()
-```
+
+		```
+		.html()
+		```
 
 5. Ajax + jQuery
 
+	```
 	$.getJSON(URL, parameters)
 		.done(function(data, textStatus, jqXHR) {
 			// if successful, do something
@@ -95,4 +105,5 @@
 	.fail(function(jqXHR, textStatus, errorThrown) {
 		// else handle error
 	});
+	```
 
