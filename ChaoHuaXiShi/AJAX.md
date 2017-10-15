@@ -7,6 +7,7 @@
       - allows us to send additional GET or POST requests.
 
 1. Central to our ability to asynchronously update our pages is to make use of a special JavaScript object called an XMLHttpRequest.
+
 	var xhttp = new XMLHttpRequest();
 
 2. After obtaining the new object, we need to define its onreadystatechange behavior.
@@ -58,21 +59,27 @@
 4. Some Useful jQuery
    - call someFunction when DOM has loaded
 
+	```
 	$(document).ready(someFunction)
+	```
 
    - select the DOM element with ID someID
 
+	```
 	$("#someID")
+	```
 
    - on <form> submission, call someFunction
-```
-.submit(someFunction)
-```
+
+	```
+	.submit(someFunction)
+	```
 
    - get value submitted through a form
-```
-.val()
-```
+
+	```
+	.val()
+	```
 
    - access HTML
 ```
