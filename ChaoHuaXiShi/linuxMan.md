@@ -1,15 +1,29 @@
 ## Linux Command Line
 
 - Control-L/Command-K: keep the terminal neat.
-- $ rm -rf //recursively&forcibly. $ rmdir dir
-- $ mv WATER.c water.c // change the file’s name. $ mv src/Person.php src/Users/Person.php
-- $ cd <directory> //input the first letters of dir hit tab. $ cd -  //the prior one and the current dir
-- $ pwd // print working directory. $ mkdir -p foo/bar/baz
+
+- $ rm -rf //recursively&forcibly
+- $ rmdir dir
+- $ mv WATER.c water.c // change the file’s name
+- $ mv src/Person.php src/Users/Person.php
+- $ cd <directory> //input the first letters of dir hit tab
+
+- $ cd -  //the prior one and the current dir
+- $ pwd // print working directory
+- $ mkdir -p foo/bar/baz
 - $ touch folder/file. $ touch foo/{a,b,c,d,e}. $ touch a b c
-- $ man ls // help. $ grep //search. $ diff foo bar
-- $ cat composer.json  $ tree  $ echo {} > composer.json
-- $ ls -l > foo  $ wc -l < foo  $ wc -l foo  $ ls -l | wc -l
-- $ cp php.php php01.php $ cp -r // recursive copy entire directories
+- $ man ls // help
+
+- $ grep //search
+- $ diff foo bar
+- $ cat composer.json
+- $ tree
+- $ echo {} > composer.json
+
+- $ wc -l foo
+- $ ls -l > foo  $ wc -l < foo
+- $ ls -l | wc -l
+- $ cp php.php php01.php or -r // recursive copy entire directories
 
 
 Apache:
