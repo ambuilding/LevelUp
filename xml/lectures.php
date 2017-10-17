@@ -12,7 +12,7 @@
     <h1>Lectures</h1>
     <ul>
     <?php
-        foreach ($dom->lecture as $lecture) {
+        foreach ($dom->lectures as $lecture) {
           print("<li>");
             print($lecture["number"]);
             print(": ");
@@ -20,7 +20,8 @@
             print("<ul>");
 
             foreach ($lecture->resources->resource as $resource) {
-                print("<li>"); print($resource["name"]);
+                print("<li>");
+                print($resource["name"]);
                 print(": ");
                 foreach ($resource->format as $format) {
                     $path = $format["path"];
@@ -50,13 +51,13 @@
     <h1>CSCI S-75</h1>
     <ul>
       <?php
-         $dom = simplexml_load_file("lectures.xml");
-         foreach ($dom->xpath("/lectures/lecture") as $lecture)
-         {
-             print "<li>";
-             print $lecture->title;
-             print "</li>";
-         }
+         // $dom = simplexml_load_file("lectures.xml");
+         // foreach ($dom->xpath("/lectures/lecture") as $lecture)
+         // {
+         //     print "<li>";
+         //     print $lecture->title;
+         //     print "</li>";
+         // }
 
       ?>
     </ul>
