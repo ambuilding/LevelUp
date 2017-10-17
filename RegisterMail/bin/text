@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+<?php
+
+    require("../includes/config.php");
+
+    // select all rows from users table
+    $rows = query("SELECT * FROM users");
+
+    // iterate over rows
+    foreach ($rows as $row)
+    {
+        // print summary of row
+        printf("Name is %s, number is %s, and carrier is %s.\n", $row["name"], $row["number"], $row["carrier"]);
+
+        // send personalized text
+        text($row["number"], $row["carrier"], "hello, ${row["name"]}");
+    }
+
+?>
