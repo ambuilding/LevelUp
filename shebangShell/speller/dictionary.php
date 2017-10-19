@@ -19,6 +19,7 @@
     {
         global $table;
 
+        // Be case-insensitive
         if (isset($table[strtolower($word)]))
         {
             return true;
@@ -36,10 +37,19 @@
     {
         global $table, $size;
 
-        if (!file_exists($dictionary) && is_readable($dictionary))
-        {
+        if (!file_exists($dictionary) && is_readable($dictionary)) {
             return false;
         }
+
+        // if (!is_readable($dictionary)) {
+        //     return false;
+        // }
+
+        // if (!file_exists($dictionary))
+        // {
+        //     print("$dictionary does not exist.\n");
+        //     return 1;
+        // }
 
         foreach (file($dictionary) as $word)
         {
@@ -55,6 +65,8 @@
     function size()
     {
         global $size;
+
+
         return $size;
     }
 

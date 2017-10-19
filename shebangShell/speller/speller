@@ -11,21 +11,32 @@
 
     // default dictionary
     //define("WORDS", "/home/cs50/pset5/dictionaries/large");
-    define("WORDS", "/home/william/today/large");
+    define("WORDS", "/Users/william/Today/dictionaries/large");
 
     // check for correct number of args
     if ($argc != 2 && $argc != 3)
     {
+        /*
+         dictionary is assumed to be a file containing a list of lowercase words, one per line
+         and text is a file to be spell-checked.
+         As the brackets suggest, provision of dictionary is optional;
+         if this argument is omitted, speller will use WORDS by default.
+         Within the default dictionary, all of words must be loaded into memory.
+         */
         print("Usage: speller [dictionary] text\n");
         return 1;
     }
 
     // benchmarks
-    $time_load = 0.0; $time_check = 0.0; $time_size = 0.0; $time_unload = 0.0;
+    $time_load = 0.0;
+    $time_check = 0.0;
+    $time_size = 0.0;
+    $time_unload = 0.0;
 
     // determine dictionary to use
     $dictionary = ($argc == 3) ? $argv[1] : WORDS;
 
+//die(print($dictionary));
     // load dictionary
     $before = microtime(true);
     $loaded = load($dictionary);
@@ -55,12 +66,14 @@
 
     // prepare to spell-check
     $word  = "";
-    $index = 0; $misspellings = 0; $words = 0;
+    $index = 0;
+    $misspellings = 0;
+    $words = 0;
 
     // spell-check each word in file
     for ($c = fgetc($fp); $c !== false; $c = fgetc($fp))
     {
-        // allow alphabetical characters and apostrophes (for possessives)
+        // allow strings with alphabetical characters and apostrophes"'" (for possessives)
         if (preg_match("/[a-zA-Z]/", $c) || ($c == "'" && $index > 0))
         {
             // append character to word
@@ -100,9 +113,10 @@
             $after = microtime(true);
 
             // update benchmark
+            // The number of seconds that speller spends executing the implementation of check.
             $time_check += $after - $before;
 
-            // print word if misspelled
+            // print word if misspelled; The word is not in the dictionary provided.
             if ($misspelled)
             {
                 print("$word\n");
@@ -110,7 +124,8 @@
             }
 
             // prepare for next word
-            $index = 0; $word = "";
+            $index = 0;
+            $word = "";
         }
     }
 
