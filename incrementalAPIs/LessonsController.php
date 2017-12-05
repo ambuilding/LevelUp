@@ -24,7 +24,7 @@ public function index()
 
 	$this->respondWithPagination($lessons, [
 		'data' => $this->lessonTransformer->transformCollection($lessons->all())
-	]);	
+	]);
 
 	// 1. All is bad.
 	// 2. No way to attach meta data.
@@ -36,7 +36,7 @@ public function index()
 		//'data' => $this->lessonTransformer->transformCollection($lessons)
 		'data' => $this->lessonTransformer->transformCollection($lessons->all())
 	], 200);
-// Fractal 
+// Fractal
 }
 
 
@@ -57,7 +57,7 @@ public function show($id)
 	], 200);
 
 	/*
-	Returning the proper HTTP status codes (and potentially application-specific codes) 
+	Returning the proper HTTP status codes (and potentially application-specific codes)
 	is paramount to building a successful API.
 	*/
 }
